@@ -4,28 +4,23 @@ public class Employee {
    private final String name;
     private final String firstName;
     private final String lastName;
-    private final int id;
+    private int id;
     private  double zp;
     private int department;
+    static int number;
 
-    public Employee(String name, String firstName, String lastName, int id, int department, double zp){
+    public Employee(String name, String firstName, String lastName, int department, double zp){
         this.name = name;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.id = id;
         this.department = department;
         this.zp = zp;
+          number = number + 1;
+        this.id = number;
     }
 
-//    public Employee(double zp){
-//        this.zp = zp;
-//    }
-
-//    public (){
-//
-//    }
-
-    public String getOb() {
+@Override
+    public String toString() {
         return id + " " + name + " " + firstName + " " + lastName + " " + " Отдел №" + department + " оклад: " + zp + " руб.";
     }
 
@@ -53,7 +48,7 @@ public class Employee {
         return department;
     }
 
-    public void setZp(double zp) {
+    public void setId(int zp) {
         this.zp = zp;
     }
 
