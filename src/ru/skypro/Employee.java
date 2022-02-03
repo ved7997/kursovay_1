@@ -21,7 +21,7 @@ public class Employee {
 
 @Override
     public String toString() {
-        return id + " " + name + " " + firstName + " " + lastName + " " + " Отдел №" + department + " оклад: " + zp + " руб.";
+        return id + " " + name + " " + firstName + " " + lastName + " " + " Отдел №" + department + " оклад: " + zp + " $";
     }
 
     public int getId() {
