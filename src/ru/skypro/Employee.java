@@ -15,8 +15,8 @@ public class Employee {
         this.lastName = lastName;
         this.department = department;
         this.salary = salary;
-        number = number + 1;
-        this.id = number;
+
+        this.id = number++;
     }
 
 @Override
