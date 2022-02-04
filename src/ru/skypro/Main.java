@@ -39,8 +39,6 @@ public class Main {
         System.out.println();
         printOut();
 
-
-
     }
     public static void listEmployees(){
         for (int i = 0;i <= arr.length - 1;i ++){
@@ -51,7 +49,7 @@ public class Main {
     public static void amountSalaries(){
         double sum = 0;
         for (int i = 0;i <= arr.length - 1;i ++){
-               sum = sum + arr[i].getZp();
+               sum = sum + arr[i].getsalary();
         }
         System.out.println("Сумма затрат на зарплаты в месяц: " + sum + " $");
     }
@@ -60,8 +58,8 @@ public class Main {
         String nam = "";
         double min = 1000000.0;
         for (int i = 0;i <= arr.length - 1;i ++){
-            if (arr[i].getZp() <= min){
-                min = arr[i].getZp();
+            if (arr[i].getsalary() <= min){
+                min = arr[i].getsalary();
                  nam = arr[i].getName();
             }
         }
@@ -72,8 +70,8 @@ public class Main {
         String nam = "";
         double max = 0.0;
         for (int i = 0;i <= arr.length - 1;i ++){
-            if (arr[i].getZp() >= max){
-                max = arr[i].getZp();
+            if (arr[i].getsalary() >= max){
+                max = arr[i].getsalary();
                 nam = arr[i].getName();
             }
         }
@@ -83,9 +81,9 @@ public class Main {
     public static void averageSalary(){
         double average = 0;
         for (int i = 0;i <= arr.length - 1;i ++){
-            average = average + arr[i].getZp();
+            average = average + arr[i].getsalary();
         }
-        System.out.println("Средняя зарплата в месяц: " + average/10 + " $");
+        System.out.println("Средняя зарплата в месяц: " + average/arr.length + " $");
     }
 
     public static void printOut() {
