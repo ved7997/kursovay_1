@@ -1,7 +1,7 @@
 package ru.skypro;
 
 public class Main {
-    public static Employee[]  arr = new  Employee[10];
+    private static Employee[]  arr = new  Employee[10];
 
     public static void main(String[] args) {
 
@@ -56,7 +56,7 @@ public class Main {
 
     public static void minimumWage(){
         String nam = "";
-        double min = 1000000.0;
+        double min = 8550.0;
         for (int i = 0;i <= arr.length - 1;i ++){
             if (arr[i].getsalary() <= min){
                 min = arr[i].getsalary();
@@ -66,7 +66,8 @@ public class Main {
         System.out.println("Минимальная зарплата: " + nam  + " " + min + " $");
     }
 
-    public static void maximumWage(){
+   public static void maximumWage(){
+
         String nam = "";
         double max = 0.0;
         for (int i = 0;i <= arr.length - 1;i ++){
@@ -83,7 +84,7 @@ public class Main {
         for (int i = 0;i <= arr.length - 1;i ++){
             average = average + arr[i].getsalary();
         }
-        System.out.println("Средняя зарплата в месяц: " + average/arr.length + " $");
+        System.out.println("Средняя зарплата в месяц: " + average/arr.length +" $");
     }
 
     public static void printOut() {
